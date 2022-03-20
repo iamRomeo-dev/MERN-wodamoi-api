@@ -35,7 +35,7 @@ const connectToDatabase = async (url, options) => {
 /** @type {(server: http.Server, options: import('net').ListenOptions) => Promise<void>} */
 const startHTTPServer = async (server, options) => {
   const address =
-    "https://wodamoivdeux-api.herokuapp.com/" || `http://${options.host}:${options.port}`;
+    "https://wodamoivdeux-api.herokuapp.com" || `http://${options.host}:${options.port}`;
   console.log(`Starting HTTP server on "${address}"`);
   // const spinner = ora(`Starting HTTP server on "${address}"`).start();
   return new Promise((resolve, reject) => {
