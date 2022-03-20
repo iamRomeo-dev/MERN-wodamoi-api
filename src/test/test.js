@@ -3,6 +3,8 @@ import { model, Schema } from "mongoose";
 const TestSchema = new Schema(
   {
     name: String,
+    type: String,
+    time: String,
     description: String,
     MovementOne: String,
     MovementTwo: String,
