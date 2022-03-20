@@ -11,7 +11,7 @@ dotenv.config();
 /** @type {(url: string, options: mongoose.ConnectionOptions) => Promise<void>} */
 const connectToDatabase = async (url, options) => {
   // const spinner = ora(`Connecting to database "${url}"`).start();
-  console.log(`Connecting to database "${url}"`)
+  console.log(`Connecting to database "${url}"`);
   try {
     await mongoose.connect(url, {
       // Use the new MongoDB driver implementation for parsing connection strings.
@@ -23,10 +23,10 @@ const connectToDatabase = async (url, options) => {
 
       ...options,
     });
-    console.log(`Connected to database "${url}"`)
+    console.log(`Connected to database "${url}"`);
     // spinner.succeed(`Connected to database "${url}"`);
   } catch (error) {
-    console.log(`Failed to connect to database "${url}"`)
+    console.log(`Failed to connect to database "${url}"`);
     // spinner.fail(`Failed to connect to database "${url}"`);
     throw error;
   }
