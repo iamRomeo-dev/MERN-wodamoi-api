@@ -4,7 +4,6 @@ const TestSchema = new Schema(
   {
     status: {
       type: String,
-      required: true,
       default: "planned",
       enum: ["planned", "in_progress", "done"],
     },
@@ -18,12 +17,10 @@ const TestSchema = new Schema(
     options: [],
     startDate: {
       type: Date,
-      required: true,
       default: Date.now,
     },
     endDate: {
       type: Date,
-      required: true,
       default: Date.now,
     },
     // "meta.folder": Schema.Types.Mixed,
