@@ -40,7 +40,7 @@ const startHTTPServer = async (server, options) => {
   return new Promise((resolve, reject) => {
     server
       .listen(options, () => {
-        console.log(`HTTP server started on "${address}"`);
+        console.log(`HTTP serverr started on "${address}"`);
         // spinner.succeed(`HTTP server started on "${address}"`);
         return resolve();
       })
