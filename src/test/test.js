@@ -2,28 +2,7 @@ import { model, Schema } from "mongoose";
 
 const TestSchema = new Schema(
   {
-    status: {
-      type: String,
-      default: "planned",
-      enum: ["planned", "in_progress", "done"],
-    },
-    machine: String,
-    folder: {
-      type: String,
-    },
-    assignedTaskType: {
-      type: String,
-    },
-    options: [],
-    startDate: {
-      type: Date,
-      default: Date.now,
-    },
-    endDate: {
-      type: Date,
-      default: Date.now,
-    },
-    // "meta.folder": Schema.Types.Mixed,
+    name: String,
   },
   { timestamps: true }
 );

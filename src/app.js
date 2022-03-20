@@ -79,6 +79,6 @@ app.use(validationErrorHandler);
 app.use(errorHandler);
 
 // JWT Authentication
-app.use(jwtCheck)
+app.use(jwtCheck);
 
 export default app;
