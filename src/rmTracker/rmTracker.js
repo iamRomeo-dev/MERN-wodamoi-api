@@ -2,8 +2,9 @@ import { model, Schema } from "mongoose";
 
 const RmTrackerSchema = new Schema(
   {
-    name: String,
+    movment: String,
     weight: String,
+    createdBy: String,
   },
   { timestamps: true }
 );
