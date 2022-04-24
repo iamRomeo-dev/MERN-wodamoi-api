@@ -6,6 +6,7 @@ import "express-async-errors";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import morgan from "morgan";
+import { RmTrackerRouter } from "./rmTracker/RmTrackerRouter";
 
 import { bodyParserErrorHandler } from "./utils/bodyParserErrorHandler";
 import { errorHandler } from "./utils/errorHandler";
@@ -63,6 +64,7 @@ app.use(
 
 // Our application routes:
 app.use("/v1/wodCreator", WodCreatorRouter);
+app.use("/v1/rmTracker", RmTrackerRouter);
 
 // Handle requests matching no routes.
 app.use(notFoundHandler);
