@@ -14,7 +14,7 @@ import { notFoundHandler } from "./utils/notFoundHandler";
 import { unauthorizedErrorHandler } from "./utils/unauthorizedErrorHandler";
 import { validationErrorHandler } from "./utils/validationErrorHandler";
 
-import { WodCreatorRouter } from "./test/wodCreatorRouter";
+import { WodCreatorRouter } from "./wodCreator/wodCreatorRouter";
 
 const app = express();
 
@@ -62,7 +62,7 @@ app.use(
 // app.use(jwtCheck);
 
 // Our application routes:
-app.use("/v1/test", WodCreatorRouter);
+app.use("/v1/wodCreator", WodCreatorRouter);
 
 // Handle requests matching no routes.
 app.use(notFoundHandler);
