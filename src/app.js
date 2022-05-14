@@ -6,6 +6,7 @@ import "express-async-errors";
 import rateLimit from "express-rate-limit";
 import helmet from "helmet";
 import morgan from "morgan";
+import { FullTrainingRouter } from "./fullTraining/fullTrainingRouter";
 import { RmTrackerRouter } from "./rmTracker/rmTrackerRouter";
 
 import { bodyParserErrorHandler } from "./utils/bodyParserErrorHandler";
@@ -63,6 +64,7 @@ app.use(
 // app.use(jwtCheck);
 
 // Our application routes:
+app.use("/v1/fullTraining", FullTrainingRouter);
 app.use("/v1/wodCreator", WodCreatorRouter);
 app.use("/v1/rmTracker", RmTrackerRouter);
 
