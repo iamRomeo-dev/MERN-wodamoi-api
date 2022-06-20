@@ -9,6 +9,7 @@ const WodCreatorSchema = new Schema(
     movementTwo: String,
     movementThree: String,
     wodType: String,
+    createdBy: String,
   },
   { timestamps: true }
 );

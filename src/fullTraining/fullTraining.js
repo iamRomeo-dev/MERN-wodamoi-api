@@ -4,6 +4,7 @@ const FullTrainingSchema = new Schema(
   {
     name: String,
     description: String,
+    createdBy: String,
   },
   { timestamps: true }
 );
