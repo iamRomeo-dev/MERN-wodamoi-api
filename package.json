@@ -1,9 +1,9 @@
 {
-  "name": "test-api",
+  "name": "wodamoi",
   "version": "1.0.0",
   "main": "./src/index.js",
-  "author": "Antoine Colmard <a.colmard@gmail.com>",
-  "license": "MIT",
+  "author": "Romeo Brilland <romeo.brilland@live.fr>",
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "nodemon --exec \"babel-node -r dotenv-defaults/config src/index.js\"",
     "build": "babel src --delete-dir-on-start --out-dir dist --ignore \"src/**/*.test.js\"",
