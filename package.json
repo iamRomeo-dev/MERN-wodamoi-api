@@ -1,5 +1,5 @@
 {
-  "name": "wodamoi",
+  "name": "wodamoiapi",
   "version": "1.0.0",
   "main": "./src/index.js",
   "author": "Romeo Brilland <romeo.brilland@live.fr>",
