@@ -1,4 +1,4 @@
-name: Backend CI/CD
+name: Build and Trigger Render Deploy
 
 on:
   push:
@@ -9,16 +9,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout code
+      - name: ⬇️ Checkout code
         uses: actions/checkout@v3
 
-      - name: 🟢 Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: 📦 Install dependencies
-        run: npm install
-
-      - name: 🚀 Deploy to Render
-        run: curl -X POST https://api.render.com/deploy/srv-d1n2n4uuk2gs739f8s4g?key=cPcEZ9taKUU
+      - name: 🚀 Trigger Render deploy
+        run: |
+          curl -X POST https://api.render.com/deploy/srv-d1n2n4uuk2gs739f8s4g?key=cPcEZ9taKUU
