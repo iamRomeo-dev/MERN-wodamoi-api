@@ -1,28 +1,40 @@
+# MERN-wodamoi-api
+
 Wodamoi is a sport application.
 It allows the user to store its own workouts and best movement.
 Have fun !!!
-This repo is the back-end of the MERN application
+This repo is the backend of the MERN application
+This is a Node.js backend API for a MERN stack application, built using modern JavaScript (ES6+) and Babel. It uses environment configuration, supports hot reloading via `nodemon`, and loads environment variables with `dotenv-defaults`.
 
-# first, clone MERN-wodamoi-api !
+Install also the frontend application to see the result in live :
+https://github.com/iamRomeo-dev/MERN-wodamoi
 
-The back end of the application.
+## 🚀 Features
 
-# clone the project
+- Babel support for ES6+ syntax
+- Hot reload with `nodemon`
+- Environment config via `.env` and `.env.defaults`
+- Organized codebase in `src/` folder
+- Start script for development with automatic transpilation
 
-git clone ...
+## 📦 Installation
 
-# install dependencies
-
+```bash
+git clone https://github.com/yourusername/MERN-wodamoi-api.git
+cd MERN-wodamoi-api
 npm install
+```
 
-# launch the project
+## Launch the server
 
-yarn dev
+```bash
+npm run dev
+```
 
-# use it
+## Use it
 
 http://localhost:8080
 
-# MUST HAVE !
+## MUST HAVE !
 
 MongoDB
