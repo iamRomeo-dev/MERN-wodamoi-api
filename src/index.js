@@ -78,7 +78,7 @@ connectToDatabase(process.env.MONGO_URL, {
 // create HTTP server and listen to connections.
 startHTTPServer(server, {
   host: process.env.HOST,
-  port: Number(process.env.PORT),
+  port: Number(process.env.PORT) || 8080,
 });
 
 export default app;
