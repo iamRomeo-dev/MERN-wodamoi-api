@@ -3,20 +3,26 @@ import Boom from "@hapi/boom";
 import { validateObjectId } from "../utils/validateObjectId";
 import { sanitize } from "../utils/sanitize";
 import { RmTracker } from "./rmTracker";
+import { sanitizeRegexOptions } from "./service";
 
 const RmTrackerRouter = express.Router();
 
 RmTrackerRouter.route("/")
   .get(async (req, res) => {
     const { limit = 20, skip = 0, sort = "_id", select, populate, ...filter } = req.query;
+
+    sanitizeRegexOptions(filter);
+
     const listQuery = RmTracker.find(filter)
       .limit(Number(limit))
       .skip(Number(skip))
       .sort(sort)
       .select(select)
       .populate(populate);
+
     const totalCountQuery = RmTracker.find(listQuery.getFilter()).countDocuments();
     const [list, totalCount] = await Promise.all([listQuery, totalCountQuery]);
+
     res.set("X-Total-Count", String(totalCount));
     return res.json(list);
   })
